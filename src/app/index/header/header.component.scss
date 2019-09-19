@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i,900,900i|Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
+
 header {
   position: fixed !important;
   top: 0;
@@ -43,7 +45,7 @@ header a {
 }
 
 .dropdown-content a:hover {
-  background-color: #FF6D63;
+  background-color: #FFCE00;
   color: #ffffff;
 }
 
@@ -64,7 +66,7 @@ header a {
 
 header .nav-item {
   padding: 0.9em;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Merriweather', serif;
   -webkit-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
   -ms-transition: all 0.2s ease;
@@ -76,6 +78,46 @@ header .nav-item {
 /*  padding-left: 8rem;*/
 /*}*/
 
-header .nav-link:hover {
-  color: #FF6D63;
+.nav-item .nav-link {
+  padding: 8px;
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #D4D4D4;
+  font-weight: bold;
+  position: relative;
+}
+
+.nav-item .nav-link:after {
+  content: '';
+  width: 0%;
+  transition: all 0.3s ease;
+  left: 50%;
+}
+
+.nav-item .nav-link:before {
+  content: '';
+  width: 0%;
+  transition: all 0.3s ease;
+  left: 50%;
+}
+
+.nav-item .nav-link:hover:after {
+  content: '';
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  background: #FFDA00;
+  height: 3px;
+  width: 50%;
+}
+
+.nav-item .nav-link:hover:before {
+  content: '';
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  background: #FFDA00;
+  height: 3px;
+  width: 50%;
 }

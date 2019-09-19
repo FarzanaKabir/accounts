@@ -1,0 +1,32 @@
+<div class="login-wrapper mt-5 pt-5" fxLayout="row" fxLayoutAlign="center center">
+
+  <mat-card class="box">
+    <mat-card-header>
+      <mat-card-title>Log in</mat-card-title>
+    </mat-card-header>
+
+    <form class="example-form">
+      <mat-card-content>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Username">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Password">
+        </mat-form-field>
+      </mat-card-content>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="d-inline-flex">
+            <span>Or,</span>
+            <a routerLink="/register">Create A/C</a>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <button mat-stroked-button color="accent" class="btn-block">Log in</button>
+        </div>
+      </div>
+    </form>
+  </mat-card>
+
+</div>
