@@ -6,6 +6,7 @@ import {AppComponent} from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {IndexModule} from './index/index.module';
 import {FlexLayoutModule} from '@angular/flex-layout';
+import {HomeModule} from './layout/home/home.module';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import {FlexLayoutModule} from '@angular/flex-layout';
     AppRoutingModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
+    HomeModule,
 
 
     IndexModule

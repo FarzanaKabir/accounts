@@ -9,11 +9,12 @@ import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {AppRoutingModule} from '../app-routing.module';
+import { CreationComponent } from './auth/creation/creation.component';
 
 
 
 @NgModule({
-  declarations: [IndexComponent, HeaderComponent, FooterComponent, AuthComponent, LoginComponent, RegisterComponent],
+  declarations: [IndexComponent, HeaderComponent, FooterComponent, AuthComponent, LoginComponent, RegisterComponent, CreationComponent],
   exports: [
     HeaderComponent
   ],
