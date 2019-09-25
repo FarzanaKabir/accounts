@@ -1,1 +1,73 @@
-<p>home works!</p>
+<section class="home pt-5 mt-5 pb-5 mb-5">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-2">
+        <app-sidenav></app-sidenav>
+      </div>
+      <div class="col-md-3">
+        <div class="chart-card">
+          <mat-card>
+            <div class="account-chart">
+              <div class="cart-title">
+                <h4> Chart of Accounts</h4>
+              </div>
+              <ul>
+                <li><a href="">Account Info</a></li>
+                <li><a href="">Pay Roll Info</a></li>
+                <li><a href="">Inventory stock</a></li>
+              </ul>
+            </div>
+            <div class="transaction">
+              <div class="cart-title">
+                <h4>Transaction</h4>
+              </div>
+              <ul>
+                <li><a href="">Sale</a></li>
+                <li><a href="">Purchase</a></li>
+                <li><a href="">Jurnal Entry</a></li>
+              </ul>
+            </div>
+            <div class="report">
+              <div class="card-title">
+                <h4>Report</h4>
+              </div>
+            </div>
+          </mat-card>
+
+        </div>
+      </div>
+      <div class="col-md-7">
+        <div class="company-list table-responsive">
+          <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+            <!-- No Column -->
+            <ng-container matColumnDef="id">
+              <th mat-header-cell *matHeaderCellDef> No.</th>
+              <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+            </ng-container>
+
+            <!-- Name Column -->
+            <ng-container matColumnDef="name">
+              <th mat-header-cell *matHeaderCellDef> Name</th>
+              <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+            </ng-container>
+
+            <!-- Date Column -->
+            <ng-container matColumnDef="date">
+              <th mat-header-cell *matHeaderCellDef> Date</th>
+              <td mat-cell *matCellDef="let element"> {{element.date}} </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-5 pt-5">
+      <div class="col-md-12">
+        <app-report></app-report>
+      </div>
+    </div>
+  </div>
+</section>
+<router-outlet></router-outlet>
